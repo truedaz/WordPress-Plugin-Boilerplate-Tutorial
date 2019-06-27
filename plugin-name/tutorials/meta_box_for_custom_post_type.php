@@ -2,7 +2,7 @@
 
 
 /*******************************************************
- * REGISTER METABOX FOR A CUSTOM POST TYPE (customers) *
+ * REGISTER METABOX FOR A CUSTOM POST TYPE (test) *
  * --------------------------------------------------- *
  *******************************************************/
 
@@ -41,7 +41,7 @@ public function save_meta_options() {
 /* Create a meta box for our custom fields */
 public function rerender_meta_options() {
 
-    add_meta_box("customer-meta", "Customer Details", array($this, "display_meta_options"), "customers", "normal", "low");
+    add_meta_box("customer-meta", "Customer Details", array($this, "display_meta_options"), "test", "normal", "low");
 
 }
 
