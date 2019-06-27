@@ -20,15 +20,15 @@
 
         // ...
 
-		$this->loader->add_action( 'admin_post_csv_export', $plugin_public, 'csv_export' );
-		$this->loader->add_action( 'admin_post_nopriv_csv_export', $plugin_public, 'csv_export' );
+		$this->loader->add_action( 'admin_post_csv_export', $plugin_admin, 'csv_export' );
+		$this->loader->add_action( 'admin_post_nopriv_csv_export', $plugin_admin, 'csv_export' );
 
         // ...
 
     }
 
 /////////////////////////////////////////////////////
-// ADD TO FILE -> public/class-plugin-name-public.php
+// ADD TO FILE -> admin/class-plugin-name-admin.php
 
     /**
      * Convert array to CSV.
@@ -148,7 +148,7 @@
  *
  * You could use PLUGIN-NAME/ADMIN/PARTIALS/PLUGIN-NAME-ADMIN-DISPLAY.PHP
  * and add:
- * <a href="<?php admin_url( 'admin-post.php?action=csv_export' ); ?>" class="button button-primary" target="_blank">Export CSV</a>
+ * <a href="<?= admin_url( 'admin-post.php?action=csv_export' ); ?>" class="button button-primary" target="_blank">Export CSV</a>
  *
  * OR you can add to EXOPITE SIMPLE OPTIONS FRAMEWORK ADMIN MENU
  *    array(
